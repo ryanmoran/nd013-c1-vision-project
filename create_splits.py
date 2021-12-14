@@ -2,6 +2,8 @@ import argparse
 import glob
 import os
 import random
+from datetime import datetime
+import shutil
 
 import numpy as np
 
@@ -17,7 +19,24 @@ def split(source, destination):
         - source [str]: source data directory, contains the processed tf records
         - destination [str]: destination data directory, contains 3 sub folders: train / val / test
     """
-    # TODO: Implement function
+    paths = os.listdir(source)
+    random.seed(datetime.now())
+    random.shuffle(paths)
+
+    splits = {
+        os.path.join(destination, 'train'): paths[:75],
+        os.path.join(destination, 'val'): paths[75:90],
+        os.path.join(destination, 'test'): paths[90:]
+    }
+
+    for directory in splits.keys():
+        os.makedirs(directory, exist_ok=True)
+
+        for path in splits[directory]:
+            src = os.path.join(source, path)
+            dst = os.path.join(directory, path)
+            print(f'moving {src} to {dst}')
+            shutil.move(src, dst)
 
 
 if __name__ == "__main__":
