@@ -36,7 +36,9 @@ Finally, as we saw from the random sampling, the dataset includes scenes from di
 
 ## Cross validation
 
-This section should detail the cross validation strategy and justify your approach.
+The splits chosen for the dataset are 75% training, 15% validation, and 10% testing.
+Splitting the data in this way gives us a substantial corpus to train and subsequently validate from.
+Keeping 10% set aside for testing should ensure we detect if the model has overfit to the training/validation dataset.
 
 # Training
 ## Reference experiment
