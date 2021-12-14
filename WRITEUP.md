@@ -1,6 +1,10 @@
 # Project overview
 
-This section should contain a brief description of the project and what we are trying to achieve. Why is object detection such an important component of self driving car systems?
+In this project, we will be exploring the construction of an object detection model for the Waymo Open Dataset.
+In this exploration, we will analyze the dataset, choose training, validation, and test splits, and build and train a model.
+Along the way, we will assess the contents of the dataset, choose augmentations to the dataset to help improve model performance, and make improvements to an existing model.
+All of this is to enable a deeper understanding of object detection as a key aspect of self-driving car systems.
+Object detection is the primary mechanism for a self-driving car system to perceive the other actors in the environment and to navigate that environment without causing harm.
 
 # Dataset
 
