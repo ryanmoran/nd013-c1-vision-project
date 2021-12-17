@@ -41,9 +41,25 @@ Splitting the data in this way gives us a substantial corpus to train and subseq
 Keeping 10% set aside for testing should ensure we detect if the model has overfit to the training/validation dataset.
 
 # Training
+
 ## Reference experiment
 
-This section should detail the results of the reference experiment. It should includes training metrics and a detailed explanation of the algorithm's performances.
+We ran the reference experiment to establish a baseline performance for object detection.
+Looking at the loss metrics, we can see that the loss values for classification and localization are falling toward zero, reaching 0.2378 and 0.2722 respectively after 25k steps.
+Additionally, we can see the validation loss is converging towards those same values, with classification at 0.3708 and localization at 0.4434 after 24k steps.
+
+![Reference Loss](./assets/reference-loss.png)
+
+At the same time, we can see both mean average precision and average recall are increasing.\
+The final result for mAP after 24k steps is 0.09193.
+For AR@100 after 24k steps, we see 0.1485.
+
+![Reference Precision/Recall](./assets/reference-precision-recall.png)
+
+Ultimately, we've been able to achieve reasonable, if not great, results from training this model.
+Next, we will make some modifications to the reference to try to improve its performance.
+
+![Reference Eval Side-by-side](./assets/reference-eval-side-by-side.png)
 
 ## Improve on the reference
 
