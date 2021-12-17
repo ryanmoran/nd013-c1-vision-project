@@ -83,7 +83,7 @@ WORKDIR /app
 
 COPY requirements.txt .
 RUN python -m pip install -r requirements.txt
-RUN python -m pip install git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonAPI
+RUN python -m pip install git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI
 
 ENV TF_CPP_MIN_LOG_LEVEL=2
 

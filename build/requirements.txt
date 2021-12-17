@@ -1,11 +1,11 @@
 Cython==0.29.21
+Pillow==7.2.0
+albumentations
 jupyter==1.0.0
 matplotlib
-Pillow==7.2.0
-ray==0.8.7
 pyparsing==2.4.2
-waymo-open-dataset-tf-2-5-0==1.4.1
-tensorflow==2.5.0
-tensorflow-object-detection-api
-albumentations
+ray==0.8.7
 seaborn
+tensorflow-object-detection-api
+tensorflow==2.5.0
+waymo-open-dataset-tf-2-5-0==1.4.1
